@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+
+  <title>Registration</title>
+
+<style>
+    body{
+        font-family: Poppins, sans-serif;
+        background-color:#fff;
+
+    }
+
+    /* Registration form styles */
+    /* Container styling */
+    #registerContainer {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Form styling */
+    #registerForm {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #ffffffa6;
+       /// box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Title styling */
+    #registerForm h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Input styling */
+#registerForm input[type="email"], #registerForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    font-size: 16px;
+}
+
+    /* Button styling */
+#registerForm button {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    #registerForm button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Login link styling */
+    .fusr {
+        display: inline-block;
+        margin-top: 10px;
+        color: #007bff;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .fusr:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 576px) {
+       #registerContainer {
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+    }
+
+    /* Interaction and Glow Effect */
+#registerForm input[type="email"]:focus,
+#registerForm input[type="password"]:focus,
+#registerForm input[type="text"]:focus,
+#registerForm input[type="tel"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+/* Glow Effect on Hover */
+#registerForm button:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+}
+
+/* Opacity Effect */
+#registerForm {
+  transition: opacity 0.3s ease;
+}
+
+#registerForm.inactive {
+  opacity: 0.5;
+}
+
+
+.error-message {
+    display: none;
+    background-color: #ffcccc; /* Red background color */
+    color: #cc0000; /* Text color */
+    font-family: 'Poppins', sans-serif; /* Poppins font family */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+
+}
+
+
+
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin: 14px;
+}
+
+
+
+
+
+
+
+
+
+#imglogo{width: 41px;
+    height: 35px;}
+
+
+
+
+
+
+
+
+
+    .containero{
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 10px;
+      box-shadow: 0px 0px 8px rgb(0 0 0 / 36%);
+        background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 17px;
+    }
+    textarea {
+        resize: vertical;
+    }
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+h2 {
+    text-align: center;
+    font-family: system-ui;
+    font-size: 23px;
+}
+
+
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 16px 51px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: system-ui;
+    border-radius: 5px;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    font-size: 21px;
+    font-family: monospace;
+}
+
+.bg-dark {
+    background-color: orange!important;
+}
+.loo{color:#333;}
+
+
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    font-size: 21px;
+   
+    font-weight: 800;
+}
+.bg-dark {
+    background-color: #5bc8ac!important;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-family: system-ui;
+    font-weight: 400;
+}
+
+</style>
+
+</head>
+<body >
+
+
+
+  <div id="contentContainer">
+    <!-- Your website content goes here -->
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/" style=' font-family: monospace;'>
+        <img src="icon.png" class="logo" id='imglogo'>
+      <span class='logo-text'>  SkyDrive</span>
+      </a>
+   
+      
+    </div>
+  </nav>
+</header>
+
+</div>
+
+
+
+
+  <div id="registerContainer">
+    <form id="registerForm">
+        <h2>Signup</h2>
+
+        <div>
+            <input type="email" id="email" required placeholder="Enter Email"  autocomplete="off" >
+        </div>
+        <div>
+            <input type="password" id="password" required placeholder="Enter Password">
+        </div>
+        <div>
+            <input type="password" id="confirmPassword" required placeholder="Confirm Password">
+        </div>
+   
+        <button type="submit">Register</button>
+        <a href='index.html' class="fusr" ><span class='loo'>Already have an account?</span> Login</a>
+
+
+<div id="errorMessage" class="error-message" style="display: none;"></div>
+
+    </form>
+
+
+
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Firebase Configuration and SDK -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+    // Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCFnYbBcWbXGI1RgHBdCf5cbxPtuCHVx4o",
+        authDomain: "authweb-cadbc.firebaseapp.com",
+        projectId: "authweb-cadbc",
+        storageBucket: "authweb-cadbc.appspot.com",
+        messagingSenderId: "49787714449",
+        appId: "1:49787714449:web:6de3a79a7f8b9622bd3830",
+        measurementId: "G-C7YW3CWGSK"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+
+    // Register Form
+    const registerForm = document.getElementById('registerForm');
+    registerForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = registerForm['email'].value;
+        const password = registerForm['password'].value;
+        const confirmPassword = registerForm['confirmPassword'].value;
+        
+        if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return;
+        }
+
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            // User registered and logged in successfully
+            console.log("User registered and logged in:", userCredential.user);
+            // Redirect to a success page or perform any other necessary action
+            window.location.href = 'index.html';
+        } catch (error) {
+            // Registration error
+            console.error("Registration error:", error);
+            // Handle error, e.g., display error message to the user
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const registerFoorm = document.getElementById('registerForm');
+    const errorMessage = document.getElementById('errorMessage');
+
+    registerFoorm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = registerFoorm['email'].value;
+        const password = registerFoorm['password'].value;
+        const confirmPassword = registerFoorm['confirmPassword'].value;
+        
+        if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return;
+        }
+
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            // User registered and logged in successfully
+            console.log("User registered and logged in:", userCredential.user);
+            // Redirect to a success page or perform any other necessary action
+            window.location.href = 'index.html';
+        } catch (error) {
+            // Registration error
+            console.error("Registration error:", error);
+            if (error.code === "auth/email-already-in-use") {
+                // Display a popup message asking the user to enter another email
+                errorMessage.textContent = "Sorry, the email is already in use. Please enter another email and password.";
+                errorMessage.style.display = "block";
+            } else {
+                // Handle other registration errors
+                errorMessage.textContent = "Password must be at least 6 characters long.";
+                errorMessage.style.display = "block";
+            }
+        }
+    });
+});
+
+
+</script>
+</body>
+</html>
